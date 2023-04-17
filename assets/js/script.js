@@ -1,22 +1,28 @@
 
-
+let locateCity = "London"
 //function getApi() {
     // event listener
-fetch("https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c0a79f5410788bbe883c406a19675")
+
+    //geo end point, acquires name of the city and get the lat/long, lat and long will be used with other API
+fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locateCity}&limit=5&appid=4d1c0a79f5410788bbe883c406a19675`)
     .then(response => response.json())
     .then(citiesFound => {
         
         console.log(citiesFound);
+        console.log(locateCity)
         let firstCity = citiesFound[0];
+        let latEl = firstCity.lat;
+        let lonEl = firstCity.lon;
         console.log(firstCity)
         console.log(firstCity.lat);
         console.log(firstCity.lon);
-        //let latEl = firstCity.lat;
-        //let latEl = firstCity.lon'
+       
 
+        // this fetch request is based on prior query
+        // this is the 5-day weather forecast that acquires the lat/long data and gets the forecast
         return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=4d1c0a79f5410788bbe883c406a19675`)
-
-
+        
+         console.log
         for (let i = 0; i < data.results.length; i++) {
 
 
@@ -40,7 +46,7 @@ fetch("https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c
 
 
     })
-
+// focus on grabbing data and storing it to local storage, then user interface
   
 
 //     .then(response => response.json())

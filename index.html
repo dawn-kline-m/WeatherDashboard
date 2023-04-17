@@ -13,35 +13,47 @@
     <!-- Header -->
     <header>
         <h1>Weather Dashboard</h1>
-        <p>...</p>
     </header>
     <nav>
-        <p>
-            Navbar
-        </p>
+        </br>
     </nav>
     <main>
-    <aside>
-        <h2>Sidebar Title.</h2>
-        <div>Search for City</div>
-        <button>City 1</button>
-        <button>City 2</button>
-        <button>City 3</button>
-        <button>City 4 </button>
-    </aside>
+        <aside>
+            <h1>Search for a City:</h1>
 
-    <section>
-        <h2>Some info here:</h2>
-        <div class="image-box">Image</div>
-        <p>..do we need a paragraph here </p>
-        <br />
-        <h2>More info here ...</h2>
-        <div class="image-box">Image</div>
-        <p>
-            do we need a paragraph
-        </p>
-    </section>
-</main>
+            <form action="/action_page.php">
+                <label for="fname">City Name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <input type="submit" value="Search">
+            </form>
+
+            <p>Click the "Search" to see the 5-Day Forcast.</p>
+
+            <h2>Add to search history</h2>
+
+            <button>Paris</button>
+            <button>Rome</button>
+            <button>Sidney</button>
+            <button>Chicago</button>
+        </aside>
+
+        <section>
+            <h2>City:</h2>
+            <h3>Date:</h3>
+            <br />
+            <h3>Temp: </h3>
+            <h3>Wind: </h3>
+            <h3>Humidity:</h3>
+
+
+            <br />
+            <h2>5-Day Forecast:</h2>
+            <div class="image-box">Image </div>
+            <p>
+                ...
+            </p>
+        </section>
+    </main>
 
 </body>
 <script src="./assets/js/script.js"></script>
@@ -51,12 +63,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
     integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
     crossorigin="anonymous"></script>
-  <!-- Footer -->
-  <footer>
+<!-- Footer -->
+<footer>
     <h3>
-      Designed by:  
+        <br>
     </h3>
-  </footer>
+</footer>
 </body>
 
 </html>
