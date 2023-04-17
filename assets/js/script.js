@@ -2,7 +2,7 @@
 
 //function getApi() {
     // event listener
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c0a79f5410788bbe883c406a19675")
+fetch("https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c0a79f5410788bbe883c406a19675")
     .then(response => response.json())
     .then(citiesFound => {
         
@@ -14,7 +14,7 @@ fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c0
         //let latEl = firstCity.lat;
         //let latEl = firstCity.lon'
 
-        return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=4d1c0a79f5410788bbe883c406a19675`)
+        return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=4d1c0a79f5410788bbe883c406a19675`)
 
 
         for (let i = 0; i < data.results.length; i++) {
