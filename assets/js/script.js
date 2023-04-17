@@ -2,7 +2,7 @@
 
 //function getApi() {
     // event listener
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=4d1c0a79f5410788bbe883c406a19675")
+fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=30&appid=4d1c0a79f5410788bbe883c406a19675")
     .then(response => response.json())
     .then(citiesFound => {
         
