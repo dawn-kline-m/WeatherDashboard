@@ -4,7 +4,7 @@
 
 This is Challenge #6, this project builds a weather dashboard runs in the browser and feature dynamically updated HTML and CSS.
 
- Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to 
+ Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. 
 
 <!-- Use the [5 Day Weather Forecast](https://openweathermap.org/forecast5) to retrieve weather data for cities. The base URL should look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`. After registering for a new API key, you may need to wait up to 2 hours for that API key to activate. -->
 
@@ -14,9 +14,9 @@ This is Challenge #6, this project builds a weather dashboard runs in the browse
 
 ## User Story
 
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+A traveler:
+Wants to see the weather outlook for multiple cities
+to plan a trip accordingly
 
 ## Functionality
 
@@ -31,7 +31,6 @@ When the user views future weather conditions for that city, the user is present
 
 When the user clicks on a city in the search history, the user is presented with current and future conditions for that city
 
-
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
@@ -40,7 +39,7 @@ The following image shows the web application's appearance and functionality:
 
 ## Location
 
-You are required to submit BOTH of the following for review:
+ For review:
 
 The URL of the functional, deployed application: https://dawn-kline-m.github.io/WeatherDashboard/
 

@@ -1,63 +1,54 @@
 
 let locateCity = "London"
-//function getApi() {
-    // event listener
+
+// event listener
+function getApi(locateCity) {
+
 
     //geo end point, acquires name of the city and get the lat/long, lat and long will be used with other API
-fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locateCity}&limit=5&appid=4d1c0a79f5410788bbe883c406a19675`)
-    .then(response => response.json())
-    .then(citiesFound => {
-        
-        console.log(citiesFound);
-        console.log(locateCity)
-        let firstCity = citiesFound[0];
-        let latEl = firstCity.lat;
-        let lonEl = firstCity.lon;
-        console.log(firstCity)
-        console.log(firstCity.lat);
-        console.log(firstCity.lon);
-       
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locateCity}&units=imperial&appid=4d1c0a79f5410788bbe883c406a19675`)
+        .then(response => response.json())
+        .then(cityData => {
 
-        // this fetch request is based on prior query
-        // this is the 5-day weather forecast that acquires the lat/long data and gets the forecast
-        return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=4d1c0a79f5410788bbe883c406a19675`)
-        
-         console.log
-        for (let i = 0; i < data.results.length; i++) {
+            console.log(cityData);
+            // console.log(locateCity)
+            // let firstCity = citiesFound[0];
+            let latEl = cityData.coord.lat;
+            let lonEl = cityData.coord.lon;
+            // console.log(firstCity)
+            // console.log(firstCity.lat);
+            // console.log(firstCity.lon);
+            document.querySelector("#cityName").textContent = `City: ${cityData.name}`
+            document.querySelector("#cityTemp").textContent = `Temp: ${cityData.main.temp} F`
+            document.querySelector("#cityDate").textContent = `Date: ${new Date(cityData.dt * 1000).toLocaleDateString()}`
+            document.querySelector("#cityHumidity").textContent = `Humidity: ${cityData.main.humidity} %`
+            document.querySelector("#cityWind").textContent = `Wind: ${cityData.wind.speed} MPH`
+            // this fetch request is based on prior query
+            // this is the 5-day weather forecast that acquires the lat/long data and gets the forecast
+            return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latEl}&lon=${lonEl}&appid=4d1c0a79f5410788bbe883c406a19675`)
 
+        })
 
-            let titleEl = document.createElement("p")
-            titleEl.textContent = data.results[i].title;
+        .then(response => response.json())
+        .then(forecastData => {
 
-            document.body.appendChild(titleEl);
+            console.log(forecastData);
+            //add forecast cards here
+        })
+}
+let fetchButton = document.querySelector("#search")
 
+// event is what user does, and will refresh the page 
+fetchButton.addEventListener('submit', function (event) {
 
-            let urlEl = document.createElement("a");
-            urlEl.textContent = data.results[i].url;
-            urlEl.href = data.results[i].url;
+    //stops the default refresh
+    event.preventDefault();
+    let newCity = document.querySelector("#city-name").value
+    console.log(newCity)
 
-            document.body.appendChild(titleEl);
-            document.body.appendChild(urlEl);
-
-        }
-
-
-
-
-
-    })
-// focus on grabbing data and storing it to local storage, then user interface
-  
-
-//     .then(response => response.json())
-//     .then(data => {
-       
-//         console.log(data);
-        
-//     })
-// }
-
-// fetchButton.addEventListener('click', getApi);
+    // trigger functions, no quote for variable
+    getApi(newCity)
+});
 
 
 
