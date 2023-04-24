@@ -39,26 +39,36 @@ function getApi(locateCity) {
         .then(forecastData => {
 
             console.log(forecastData.list);
-            //add forecast cards here
+            // we have access to the data and will loop through to populate the cards
+            // inside 'list' is data for eight days, at three hour increments
             for (let i = 0; i < forecastData.list.length; i++) {
+                // element will have all the data 
                 const element = forecastData.list[i];
+                // pulling data from the 12:00 noon time frame. if the element 'includes' 12:00:00 noon, create an element
                 if (element.dt_txt.includes("12:00:00")) {
+                    // create a column
                     let column = document.createElement("div")
                     column.setAttribute("class", "col")
+                    // create a card
                     let card = document.createElement("div")
                     card.setAttribute("class", "card")
+                    // create card body
                     let cardbody = document.createElement("div")
                     cardbody.setAttribute("class", "card-body")
+                    // create card title
                     let cardtitle = document.createElement("h5")
                     cardtitle.setAttribute("class", "card-title")
                     cardtitle.textContent = element.dt_txt.split(" ")[0]
+                    // create card text
                     let cardtext = document.createElement("p")
                     cardtext.setAttribute("class", "card-text")
+                    // temperature
                     cardtext.textContent = element.main.temp
-
+                    //create card body 
                     cardbody.append(cardtitle, cardtext)
                     card.append(cardbody)
                     column.append(card)
+                    // go to html and find what we need and add to it
                     document.querySelector(".forecast").append(column)
                 }
             }

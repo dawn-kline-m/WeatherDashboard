@@ -10,9 +10,7 @@ This is Challenge #6, this project builds a weather dashboard runs in the browse
  
  After registering for a new API key, the API key will activate.
 
-`localStorage` is used to store persistent data. 
-
-<!-- For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys). --> -->
+To store any persistent data, `localStorage` is used.
 
 ## User Story
 
@@ -21,7 +19,6 @@ Wants to see the weather outlook for multiple cities
 to plan a trip accordingly
 
 ## Functionality
-
 
 The user is presented a weather dashboard with form inputs.
 
@@ -35,16 +32,17 @@ When the user clicks on a city in the search history, the user is presented with
 
 ## Mock-Up
 
-<!-- The following image shows the web application's appearance and functionality:
+A mock-up can be found in .assets/images06-server-side-apis-homework-demo.png
+A screenshot of this challenge can be found in /.assets/images/screenshot-of-weather-dashboard.png
 
-./Assets/06-server-side-apis-homework-demo.png -->
+## Screenshot
 
 ## Location
-
- For review:
 
 The URL of the functional, deployed application: https://dawn-kline-m.github.io/WeatherDashboard/
 
 The URL of the GitHub repository: https://github.com/dawn-kline-m/WeatherDashboard
 
+## Assistance
 
+I used some code from previous lessons as starter code.  I received assistance from my instructor and TA.  I also received guidance from my tutors, TA and instructor. 
