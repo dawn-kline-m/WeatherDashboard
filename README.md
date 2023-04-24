@@ -37,6 +37,8 @@ A screenshot of this challenge can be found in /.assets/images/screenshot-of-wea
 
 ## Screenshot
 
+![portfolio screenshot](./images/screenshot-of-weather-dashboard.png)
+
 ## Location
 
 The URL of the functional, deployed application: https://dawn-kline-m.github.io/WeatherDashboard/
