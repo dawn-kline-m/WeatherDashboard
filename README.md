@@ -6,17 +6,12 @@ This is Challenge #6, this project builds a weather dashboard runs in the browse
 
  Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. 
 
- The [5 Day Weather Forecast](https://openweathermap.org/forecast5) is utilized to retrieve weather data for cities. The base URL should look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`. 
+ OpenWeatherMap APIs are utilized to retrieve weather data for cities. 
  
- After registering for a new API key, the API key will activate.
-
-To store any persistent data, `localStorage` is used.
 
 ## User Story
 
-A traveler:
-Wants to see the weather outlook for multiple cities
-to plan a trip accordingly
+A traveler would like to see the weather outlook for multiple cities to plan their trip accordingly.
 
 ## Functionality
 
@@ -33,11 +28,11 @@ When the user clicks on a city in the search history, the user is presented with
 ## Mock-Up
 
 A mock-up can be found in .assets/images06-server-side-apis-homework-demo.png
-A screenshot of this challenge can be found in /.assets/images/screenshot-of-weather-dashboard.png
+
 
 ## Screenshot
 
-![portfolio screenshot](./images/screenshot-of-weather-dashboard.png)
+![portfolio screenshot](./images/weatherDashboard.png)
 
 ## Location
 

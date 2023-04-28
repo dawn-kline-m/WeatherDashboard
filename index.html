@@ -25,24 +25,23 @@
             <h1>Search for a City:</h1>
 
             <form id="search">
-                <label for="fname">City Name:</label>
+                <label>City Name:</label>
                 <input type="text" id="city-name" name="city-name"><br><br>
                 <input type="submit" value="Search">
             </form>
+            <br>
 
-            <p>Click the "Search" to see the 5-Day Forecast.</p>
+            <h2>Search history</h2>
 
-            <h2>Add to search history</h2>
+            <div class="list-group">
 
-            <button>City1</button>
-            <button>City2</button>
-            <button>City3</button>
-            <button>City4</button>
+            </div>
         </aside>
 
         <section>
             <h2 id="cityName">City:</h2>
             <h3 id="cityDate">Date:</h3>
+            <img id="cityIcon">
             <br />
             <h3 id="cityTemp"> Temp: </h3>
             <h3 id="cityWind">Wind: </h3>
@@ -50,9 +49,9 @@
 
 
             <br />
-            
+
             <h2>5-Day Forecast:</h2>
-             <!-- this is where the bootstrap row will go to populate the five-day forecast  -->
+            <!-- this is where the bootstrap row will go to populate the five-day forecast  -->
             <div class="row forecast"></div>
 
         </section>
